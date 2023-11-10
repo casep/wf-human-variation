@@ -56,34 +56,7 @@
                     "hidden": true,
                     "default": false
                 }
-            },
-            "anyOf": [
-                {
-                    "required": [
-                        "sv"
-                    ]
-                },
-                {
-                    "required": [
-                        "snp"
-                    ]
-                },
-                {
-                    "required": [
-                        "cnv"
-                    ]
-                },
-                {
-                    "required": [
-                        "str"
-                    ]
-                },
-                {
-                    "required": [
-                        "mod"
-                    ]
-                }
-            ]
+            }
         },
         "input": {
             "title": "Main options",
@@ -190,28 +163,7 @@
                     "format": "directory-path",
                     "description": "Directory for output of all workflow results."
                 }
-            },
-            "allOf": [
-                {
-                    "required": [
-                        "ref"
-                    ]
-                },
-                {
-                    "oneOf": [
-                        {
-                            "required": [
-                                "fast5_dir"
-                            ]
-                        },
-                        {
-                            "required": [
-                                "bam"
-                            ]
-                        }
-                    ]
-                }
-            ]
+            }
         },
         "sv_options": {
             "title": "Structural variant calling options",
@@ -464,8 +416,7 @@
                     "description": "Number of threads to use for base modification calling.",
                     "help_text": "You must set this to > 0 when using a modbase aware model. Modbase calling does not require much additional CPU and should be set carefully when using GPU servers with a small number of CPUs per GPU."
                 }
-            },
-            "required": []
+            }
         },
         "sv_benchmark_options": {
             "title": "Structural variant benchmarking options",
@@ -594,8 +545,7 @@
                     "type": "string",
                     "description": "Additional command line arguments to pass to the basecaller process."
                 }
-            },
-            "required": []
+            }
         },
         "multiprocessing_options": {
             "title": "Multiprocessing Options",
